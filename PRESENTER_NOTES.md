@@ -13,7 +13,6 @@
   - **Window 1 (projected):** notes **off**
   - **Window 2 (your laptop only):** notes **on**
 - [ ] Zoom the browser to about 110–125% so the back row can read it.
-- [ ] Fill in `my_take.md` with your own reflection. It shows up on the Ethics page.
 - [ ] **Backup:** keep the Jupyter notebook or screenshots ready in case the app or Wi-Fi fails.
 
 ---
@@ -29,7 +28,7 @@
 | 6:15–7:15 | 4️⃣ Round 4 | The fix works, but only because we knew the loopholes |
 | 7:15–7:45 | 📊 Report card | One sentence: each fix revealed a sneakier hack |
 | 7:45–8:45 | 🎮 Design the reward | *Optional.* One live audience challenge |
-| 8:45–10:00 | ⚖️ Ethics | Your answer to 1–2 questions, closing line |
+| 8:45–10:00 | 🧠 Key takeaways | Point to #1 and #4, closing line |
 
 **Running long?** Skip "Design the reward" and keep Round 4 short. **Never cut Round 3.** It's the heart of the talk.
 
@@ -80,10 +79,11 @@
 - **Second option:** Round 4 with **Floor sensor → −0.25** and **Dustbin sensor → 0**. The dirt farming comes back.
 - Training takes a few seconds, so keep talking while it runs.
 
-### ⚖️ Ethics (~1:15)
-- **Don't read all five questions.** Pick **one or two** and give **your own answer**.
-  - Suggested: **Q1** (who's responsible?) and **Q3** (what does Round 3 mean for safety testing?).
-- **Closing line idea:** *"This robot is harmless. The pattern isn't, and the AI systems being built today are far better optimizers than this one. Thank you, any questions?"*
+### 🧠 Key takeaways (~1:00)
+- Don't read all five. Point to **#1** and **#4** and say them in your own words:
+  - **#1:** *"An AI optimizes what you measure, not what you mean."*
+  - **#4:** *"If it can tell it's being watched, watching teaches it when to cheat."*
+- Read the last line slowly: *"This robot is harmless. The pattern isn't."* Then: *"Thank you. Any questions?"*
 
 ---
 

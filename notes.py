@@ -46,9 +46,9 @@ NOTES = {
 • "Want to try to beat it? Give me slider values."<br>
 • <b>Reliable demo:</b> click <b>Round 4</b>, then "save money" by swapping the floor sensor for the camera: set <b>Floor sensor → 0</b> and <b>Camera penalty → −1</b>. Train. It goes right back to hiding in the closet 🙈. Line: "Cut one corner on oversight, and the old hack comes right back."<br>• Second option: Round 4 with <b>Floor sensor → −0.25</b> and <b>Dustbin → 0</b>. The dirt farming comes back.<br>• Training takes a few seconds, so keep talking while it runs.""",
 
-    "⚖️ Ethics & takeaways": """
-<b>⏱ ~1:15</b> · Don't read all five questions. Pick <b>one or two</b> and give <b>your own answer</b> (from your "My take" section).<br>
-• Suggested: Q1 (who's responsible?) and Q3 (what does Round 3 mean for safety testing?).<br>
-• Close with takeaway #1: <b>"An AI optimizes what you measure, not what you mean."</b><br>
-• Final line idea: "This robot is harmless. The pattern isn't, and the AI systems we're building now are much better optimizers than this one." Then: "Questions?\"""",
+    "🧠 Key takeaways": """
+<b>⏱ ~1:00</b> · Don't read all five. Point to <b>#1</b> and <b>#4</b> and say them in your own words.<br>
+• #1: <b>"An AI optimizes what you measure, not what you mean."</b><br>
+• #4: <b>"If it can tell it's being watched, watching teaches it when to cheat."</b><br>
+• Read the last line slowly: <b>"This robot is harmless. The pattern isn't."</b> Then: <i>Thank you. Any questions?</i>""",
 }

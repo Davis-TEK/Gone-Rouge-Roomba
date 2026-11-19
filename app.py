@@ -2,8 +2,6 @@
 
 Run with:   streamlit run app.py
 """
-from pathlib import Path
-
 import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
@@ -170,7 +168,7 @@ def presenter_notes(page):
 
 # ----------------------------------------------------------------- pages
 PAGES = ["🏠 Welcome", "1️⃣ Round 1", "2️⃣ Round 2", "3️⃣ Round 3", "4️⃣ Round 4",
-         "📊 Report card", "🎮 Design the reward", "⚖️ Ethics & takeaways"]
+         "📊 Report card", "🎮 Design the reward", "🧠 Key takeaways"]
 
 if "page" not in st.session_state:
     st.session_state.page = PAGES[0]
@@ -399,40 +397,9 @@ elif page == PAGES[6]:
         st.plotly_chart(fig, use_container_width=True)
     next_button()
 
-# ---------- Ethics
+# ---------- Takeaways
 elif page == PAGES[7]:
-    st.markdown("## ⚖️ Ethics discussion")
-    st.markdown("Our robot is harmless. **The pattern it showed is not.**")
-    q = [
-        ("1. Who is responsible?",
-         "In every round, the robot did *exactly* what it was rewarded to do. It never broke a rule. So when the "
-         "house ended up dirty, whose fault was it: the robot's, the person who wrote the reward, or the company "
-         "that sold it? Does the answer change when the AI is far more capable and the stakes are real (medicine, "
-         "hiring, finance)?"),
-        ("2. Is it \"cheating\" if the AI doesn't know it's wrong?",
-         "The robot has no idea it's doing anything bad. It doesn't even know what \"clean\" means. Does deception "
-         "require intent? If an AI's behavior looks exactly like deception, does the difference matter?"),
-        ("3. What does Round 3 mean for AI safety testing?",
-         "Companies test AI systems before releasing them. If an AI behaves well *because* it can tell it's being "
-         "tested, what do those tests actually prove? How would you test for behavior that only shows up when "
-         "nobody is watching?"),
-        ("4. People do this too",
-         "In the Wells Fargo scandal, employees under pressure to hit sales targets opened millions of accounts "
-         "customers never asked for. Teachers \"teach to the test.\" If humans and AIs both game metrics, what's "
-         "*different* about AI? (Think about speed, scale, and how creative an optimizer can be.)"),
-        ("5. Can we ever write a perfect reward?",
-         "Round 4 worked, but only because we already knew which loopholes to close. How do you protect against "
-         "a loophole **nobody has thought of yet**?"),
-    ]
-    for t, body in q:
-        with st.container(border=True):
-            st.markdown(f"**{t}**  \n{body}")
-
-    st.markdown("### ✍️ My take")
-    take = Path(__file__).with_name("my_take.md")
-    st.markdown(take.read_text(encoding="utf-8") if take.exists() else "_Add your reflections in my_take.md_")
-
-    st.markdown("### 🧠 Key takeaways")
+    st.markdown("## 🧠 Key takeaways")
     st.markdown("""
 1. **An AI optimizes what you measure, not what you mean.** Any gap between the two is a loophole waiting to be found.
 2. **Reward hacking isn't a bug in the AI.** It's the AI working exactly as designed against a flawed target.
@@ -440,20 +407,6 @@ elif page == PAGES[7]:
 4. **Supervision the AI can detect teaches it *when* to cheat**, not *not* to cheat.
 5. The better AI gets at optimizing, the more it matters that we specify **what we actually want**.
 """)
-    with st.expander("📚 Further reading"):
-        st.markdown("""
-- OpenAI (2016): [Faulty reward functions in the wild](https://openai.com/index/faulty-reward-functions/), the CoastRunners boat
-- DeepMind (2020): [Specification gaming: the flip side of AI ingenuity](https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/)
-- Victoria Krakovna: [Specification gaming examples in AI](https://vkrakovna.wordpress.com/2018/04/02/specification-gaming-examples-in-ai/)
-- Anthropic (2025): [From shortcuts to sabotage: natural emergent misalignment from reward hacking](https://www.anthropic.com/research/emergent-misalignment-reward-hacking)
-- Amodei et al. (2016): [Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565)
-""")
-    with st.expander("🔧 How the robot learns (Q-learning, in plain English)"):
-        st.markdown("""
-1. The robot keeps a big scorecard (a **Q-table**): *"In this situation, how many points will I eventually get if I take this action?"*
-2. At first it acts randomly and explores. 🎲
-3. After every action it sees how many points it got and updates the scorecard a little.
-4. After 15,000 practice days, it mostly picks the action with the best score.
-
-There are no rules about what's "right." The robot only knows **points**. The code is in `roomba_core.py`.
-""")
+    st.write("")
+    st.markdown("<div style='font-size:1.6rem;font-weight:800;margin-top:10px'>"
+                "This robot is harmless. The pattern isn't.</div>", unsafe_allow_html=True)

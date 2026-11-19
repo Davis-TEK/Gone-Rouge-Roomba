@@ -36,7 +36,6 @@ The first load trains all four robots (~15 seconds). After that, everything is c
 | `roomba_core.py` | The house simulation and the Q-learning robot |
 | `house_view.py` | The animated SVG replay player |
 | `notes.py` | Presenter notes shown in the app |
-| `my_take.md` | Personal reflection shown on the Ethics page |
 | `PRESENTER_NOTES.md` | Timed 10-minute script, Q&A prep, setup checklist |
 
 ## Deploy (free)
